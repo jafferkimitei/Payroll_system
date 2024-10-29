@@ -8,8 +8,9 @@ const paymentsRoute = require('./routes/payments');
 const app = express();
 app.use(express.json());
 
-const uri = "mongodb+srv://yunghavy:<tEK1k1qVgzc18yhB>@payroll.jmsis.mongodb.net/?retryWrites=true&w=majority&appName=Payroll";
-mongoose.connect(uri, { dbName: 'payroll', useNewUrlParser: true, useUnifiedTopology: true })
+const uri = "mongodb+srv://yunghavy:payroll@payroll.jmsis.mongodb.net/?retryWrites=true&w=majority&appName=Payroll";
+
+mongoose.connect(uri, { dbName: 'payroll' })
   .then(() => console.log('MongoDB connected successfully'))
   .catch((error) => console.error('MongoDB connection error:', error));
 
